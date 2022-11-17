@@ -242,9 +242,17 @@ function handleCopyBtnClick(html_element) {
 }
 
 
+   this.Ace_Editor_Path = `https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/`
 
-
-
+   
+   // allow AceEditor + resources needed to be installed locally. 
+    /* example of usage 
+    let CodeEditor_WC_Ace_Editor_Path = "path/to/files"
+   */ 
+    
+  if (typeof CodeEditor_WC_Ace_Editor_Path != "undefined"){
+    this.Ace_Editor_Path = CodeEditor_WC_Ace_Editor_Path
+  }
 
 
 // function to load Ace Editor to page 
@@ -262,11 +270,11 @@ function handleCopyBtnClick(html_element) {
                 document.body.appendChild(gfgData);
             });
         };
-         this.gfgScript = ['https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/ace.min.js', 'https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/ext-modelist.js', "https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/ext-themelist.js"]  
+         this.gfgScript = [`${this.Ace_Editor_Path}ace.min.js`, `${this.Ace_Editor_Path}ext-modelist.js`, `${this.Ace_Editor_Path}ext-themelist.js`]
         this.promiseData = [];
     
   
-   
+   //
 
 this.isAceLoadedAlready = false
 async function loadAceEditor(){
@@ -277,11 +285,12 @@ async function loadAceEditor(){
             this.promiseData.push(loadAceEditorScripts(info));
         });
        const data = await Promise.all(this.promiseData).then(async function() {
+          this.isAceLoadedAlready  = true
        return {loaded: "true"}
         }).catch(function(gfgData) {
-         this.isAceLoadedAlready  = true
-         return {loaded: "false"}
          console.log(`Code Editor WC Error: ${gfgData} failed to load!`);
+          this.isAceLoadedAlready  = false
+         return {loaded: "false"}
         });
     
       return data
@@ -300,7 +309,7 @@ async function loadAceEditor(){
 function CreateAceCodeEditor(html_element, language){
   
     // url to load Ace Editor + resources
-    ace.config.set("basePath", "https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/");
+    ace.config.set("basePath", this.Ace_Editor_Path);
   
   
 const text_value = html_element.querySelector("#code_editor_text_value").textContent
