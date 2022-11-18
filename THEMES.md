@@ -25,7 +25,7 @@ Theme source - [URL](https://github.com/MarketingPipeline/Ace-Editor-Web-Compone
 
 CDN Usage Example - 
 ```css
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@latest/themes/cool-dark/ace-editor-wc.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@latest/themes/cool_dark/ace-editor-wc.min.css">
 ``` 
 
 
