@@ -74,9 +74,11 @@ async function CreateAceEditorForAceEditorWC(element){
 this.querySelector('.ck-button').addEventListener('click', (e) => handleCopyBtnClick(this));
 
 function handleCopyBtnClick(html_element) {
+ 
   
+  const editor = ace.edit(html_element.querySelector("#code_editor_text_value"))
   
-   navigator.clipboard.writeText(html_element.querySelector(".ace_content").innerText)
+   navigator.clipboard.writeText(editor.getValue())
   /// Set Copied To Clipboard Visible
   html_element.querySelector(".ace-editor-wc-mask").style.display = "flex"
    // then hide it after X seconds.. 
