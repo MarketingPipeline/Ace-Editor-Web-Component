@@ -59,7 +59,7 @@ and include this [CSS](https://github.com/MarketingPipeline/Ace-Editor-Web-Compo
 <br>
 
 
-How to use the <b><i>Ace Editor Web Component</b></i>: with <b>Pre-Defined Code</b>:
+How to use the <b><i>Ace Editor Web Component</b></i> with <b>Pre-Defined Code</b>:
 
 You can pre-define a code example inside the editor, simply by inserting the code inside of a <code>ace-editor</code> element like so - 
 
