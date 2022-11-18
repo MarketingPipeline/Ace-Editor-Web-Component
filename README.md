@@ -6,7 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/86180097/202600069-4a82c9b8-a033-4d04-a32d-e784906cbf01.png)
 
-A web component that allows you to easily add a code editor via [Ace Editor](https://github.com/engineer-man/piston#Public-API) <br>
+A web component that allows you to easily add code editor(s) to your web page powered via [Ace Editor](https://github.com/ajaxorg/ace) <br>
   <small> <b><i>Show your support!</i> </b></small>
   <br>
    <a href="https://github.com/MarketingPipeline/Ace-Editor-Web-Component">
@@ -41,12 +41,13 @@ Set a <code>language</code> attribute to a [supported programming language](#sup
 
    include this [script](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.js) in your HTML document.
          
-    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@main/dist/ace-editor-wc.min.js" defer></script> 
-
+  ```html
+    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.0/dist/ace-editor-wc.min.js" defer></script> 
+   ```
     
     
     
-and include this [CSS](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.css) in your HTML document.
+and include this [CSS](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.css) file in your HTML document.
 
 ```html
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.0/dist/ace-editor-wc.min.css">
