@@ -5,6 +5,8 @@
  */
 
 
+let AceEditorWC_Is_AceEditorLoaded = false;
+
 class AceEditorWC extends HTMLElement {
 	connectedCallback() {
 
@@ -127,27 +129,42 @@ function handleCopyBtnClick(html_element) {
   
    //
 
-this.isAceLoadedAlready = false
-async function loadAceEditor(){
 
-        if(this.isAceLoadedAlready === false){
+async function loadAceEditor(){
+  
+  
+  // function to make sure scripts are not already loaded by user for another instance of ace editor etc... 
+   function isFileAlreadyLoaded(url) {
+    if (!url) url = "http://xxx.co.uk/xxx/script.js";
+       
+    var scripts = document.getElementsByTagName('script');
+
+    for (var i = scripts.length; i--;) {
+          if (scripts[i].src == url) return true;
+    }
+    return false;
+}
+
+        if(AceEditorWC_Is_AceEditorLoaded === false){
           
         this.gfgScript.forEach(function(info) {
+          // make sure scripts are not already loaded by user for another instance of ace editor
+          if (isFileAlreadyLoaded(info) === false){
             this.promiseData.push(loadAceEditorScripts(info));
+        }
         });
        const data = await Promise.all(this.promiseData).then(async function() {
-          this.isAceLoadedAlready  = true
+          AceEditorWC_Is_AceEditorLoaded  = true
        return {loaded: "true"}
         }).catch(function(gfgData) {
          console.log(`Ace Editor WC WC Error: ${gfgData} failed to load!`);
-          this.isAceLoadedAlready  = false
          return {loaded: "false"}
         });
     
       return data
-      } else{
-        // Ace Editor has already been loaded to page
-      }
+      }// else{
+       /// Ace Editor has already been loaded to page
+    //  }
     
     }
 
