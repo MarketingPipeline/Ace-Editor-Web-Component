@@ -4,7 +4,7 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.0/dist/ace-editor-wc.min.css">
   
   
-<link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css">
+<link id="Ace_Editor_WC_Theme" rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css">
 <style>
 
 .markdown-body h2{
@@ -40,4 +40,31 @@ border-bottom:none;
 
 
 
-</header></div></body></html>
+</header></div></body>
+
+<script>
+ 
+if (window.location.href.indexOf("preview_theme") != -1) {
+
+window.onload=function(){
+     var url_string = window.location.href
+      var url = new URL(url_string);
+let Theme = url.searchParams.get("theme");
+
+let ThemeName = url.searchParams.get("theme_name");
+
+document.querySelector(".markdown-body").innerHTML =  `<h2 id="exampleandusage">You are currently previewing the theme ${ThemeName}</h2>
+  
+    
+      <h3>Preview</h3>
+    
+    <ace-editor language="Python" editor-title="Python Editor">print('hello world')</ace-editor>`
+
+
+
+document.querySelector("#Ace_Editor_WC_Theme").href = `https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@latest/themes/${ThemeName}/ace-editor-wc.min.css`
+
+}} 
+ </script> 
+ 
+</html>
