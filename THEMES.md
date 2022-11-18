@@ -19,7 +19,7 @@ CDN Usage Example -
 ## Cool Dark
 
 
-You can view a demo of this theme - [here](https://marketingpipeline.github.io/Ace-Editor-Web-Component/demo.html?preview_theme&theme=cool%20dark&theme_name=Cool%20Dark)
+You can view a demo of this theme - [here](https://marketingpipeline.github.io/Ace-Editor-Web-Component/demo.html?preview_theme&theme=cool_dark&theme_name=Cool%20Dark)
 
 Theme source - [URL](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/tree/main/themes/cool-dark)
 
