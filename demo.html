@@ -53,7 +53,7 @@ let Theme = url.searchParams.get("theme");
 
 let ThemeName = url.searchParams.get("theme_name");
 
-document.querySelector(".markdown-body").innerHTML =  `<h2 id="exampleandusage">You are currently previewing the theme ${ThemeName}</h2>
+document.querySelector(".markdown-body").innerHTML =  `<h2 id="exampleandusage">You are currently previewing the theme ${decodeURIComponent(ThemeName)}</h2>
   
     
       <h3>Preview</h3>
@@ -62,7 +62,7 @@ document.querySelector(".markdown-body").innerHTML =  `<h2 id="exampleandusage">
 
 
 
-document.querySelector("#Ace_Editor_WC_Theme").href = `https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@latest/themes/${ThemeName}/ace-editor-wc.min.css`
+document.querySelector("#Ace_Editor_WC_Theme").href = `https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@latest/themes/${decodeURIComponent(ThemeName)}/ace-editor-wc.min.css`
 
 }} 
  </script> 
