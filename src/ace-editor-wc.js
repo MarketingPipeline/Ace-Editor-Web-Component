@@ -162,9 +162,10 @@ async function loadAceEditor(){
         });
     
       return data
-      }// else{
-       /// Ace Editor has already been loaded to page
-    //  }
+      } else{
+       //  Ace Editor has already been loaded to page
+	       return {loaded: "true"}
+       }
     
     }
 
