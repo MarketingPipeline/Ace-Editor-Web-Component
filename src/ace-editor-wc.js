@@ -240,9 +240,26 @@ editor.clearSelection();
 //editor.setOptions({
   //  maxLines: Infinity
 // });
-editor.setOptions({
-   maxLines: Infinity
+
+// allow custom editor options to be set
+ if(html_element.getAttribute("editor-options")){
+editor.setOptions(JSON.parse(html_element.getAttribute("editor-options")))
+ } else{
+ 
+   let MaxLines = Infinity
+   
+   // allow max-lines to be set...
+    if(html_element.getAttribute("max-lines")){
+      MaxLines = Number(html_element.getAttribute("max-lines"))
+    }
+   
+   editor.setOptions({
+   maxLines: MaxLines
  });
+   
+ }
+  	
+	
 }
   
 
