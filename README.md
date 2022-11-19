@@ -100,7 +100,7 @@ You can pre-define a code example inside the editor, simply by inserting the cod
 <td>No</td>
 </tr>
 
-
+### ADD THESE - max-lines="2" editor-options='{ "maxLines" : "10" }'  
 
 
 
