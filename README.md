@@ -42,7 +42,7 @@ Set a <code>language</code> attribute to a [supported programming language](#sup
    include this [script](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.js) in your HTML document.
          
   ```html
-    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.0/dist/ace-editor-wc.min.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.1/dist/ace-editor-wc.min.js" defer></script> 
    ```
     
     
@@ -50,7 +50,7 @@ Set a <code>language</code> attribute to a [supported programming language](#sup
 and include this [CSS](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.css) file in your HTML document.
 
 ```html
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.0/dist/ace-editor-wc.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.1/dist/ace-editor-wc.min.css">
 ```
 
 <b>Note</b>: you can easily customize the look of this web component by hosting your own customized CSS file - feel free to add your custom stylesheet to the theme list [here](THEMES.md)!    
@@ -88,6 +88,11 @@ You can pre-define a code example inside the editor, simply by inserting the cod
 <td>Yes</td>
 </tr>
 <tr>
+<td> max-lines</td>
+ <td>The max number of lines to set Ace Editor height too</b></td>
+<td><code>Undefined</code></td>
+<td>No</td>
+</tr>
 <td>editor-title</td>
  <td>The editor title to use</b></td>
 <td><code>Language</code></td>
@@ -99,7 +104,12 @@ You can pre-define a code example inside the editor, simply by inserting the cod
 <td><code>Monokai</code></td>
 <td>No</td>
 </tr>
-
+<tr>
+<td> editor-options</td>
+ <td>Set the ace editor options example - <code>editor-options='{ "maxLines" : "10" }'</code>. <b>NOTE</b>: This will over-write max-lines attribute (if used)</b></td>
+<td><code>Undefined</code></td>
+<td>No</td>
+</tr>
 
 
 
@@ -244,10 +254,6 @@ let AceEditor_WC_Ace_Editor_Path = "path/to/files/"
 ```
 
 You can download / find the version of Ace Editor used in the web-component [here](https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/)
-
-## Themes
-
-You can view a list of themes / CSS stylesheet(s) that work with this web component [here](THEMES.md).
 
 ## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/Ace-Editor-Web-Component)
 
