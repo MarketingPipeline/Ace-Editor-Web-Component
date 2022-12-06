@@ -1,6 +1,6 @@
 /**!
  * @license Ace-Editor-Web-Component - A web component to easily add a code editor or editor(s) to your HTML document
- * VERSION: 1.0.0
+ * VERSION: 1.0.1
  * MORE INFO CAN BE FOUND AT https://github.com/MarketingPipeline/Ace-Editor-Web-Component
  */
 
@@ -103,8 +103,8 @@ function handleCopyBtnClick(html_element) {
     let AceEditorWC_WC_Ace_Editor_Path = "path/to/files"
    */ 
     
-  if (typeof AceEditorWC_WC_Ace_Editor_Path != "undefined"){
-    this.Ace_Editor_Path = AceEditorWC_WC_Ace_Editor_Path
+  if (typeof AceEditorWC_Ace_Editor_Path != "undefined"){
+    this.Ace_Editor_Path = AceEditorWC_Ace_Editor_Path
   }
 
 
