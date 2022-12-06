@@ -103,8 +103,8 @@ function handleCopyBtnClick(html_element) {
     let AceEditorWC_WC_Ace_Editor_Path = "path/to/files"
    */ 
     
-  if (typeof AceEditorWC_Ace_Editor_Path != "undefined"){
-    this.Ace_Editor_Path = AceEditorWC_Ace_Editor_Path
+  if (typeof AceEditor_WC_Ace_Editor_Path != "undefined"){
+    this.Ace_Editor_Path = AceEditor_WC_Ace_Editor_Path
   }
 
 
