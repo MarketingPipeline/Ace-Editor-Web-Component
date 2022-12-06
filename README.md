@@ -53,7 +53,7 @@ and include this [CSS](https://github.com/MarketingPipeline/Ace-Editor-Web-Compo
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.1/dist/ace-editor-wc.min.css">
 ```
 
-<b>Note</b>: you can easily customize the look of this web component by hosting your own customized CSS file - feel free to add your custom stylesheet to the theme list [here](THEMES.md)!    
+<b>Note</b>: you can easily customize the look of this web component by hosting your own customized CSS file.
 
 
 <br>
