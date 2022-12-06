@@ -157,7 +157,7 @@ async function loadAceEditor(){
           AceEditorWC_Is_AceEditorLoaded  = true
        return {loaded: "true"}
         }).catch(function(gfgData) {
-         console.log(`Ace Editor WC WC Error: ${gfgData} failed to load!`);
+         console.log(`Ace Editor WC Error: ${gfgData} failed to load!`);
          return {loaded: "false"}
         });
     
@@ -204,7 +204,7 @@ if(themes[html_element.getAttribute("editor-theme").toLowerCase()] != undefined)
 } else{
   //
   /// Theme choice was not valid
-  console.log(`Ace Editor WC WC Error: ${html_element.getAttribute("editor-theme")} is not a valid theme - setting to default.`)
+  console.log(`Ace Editor WC Error: ${html_element.getAttribute("editor-theme")} is not a valid theme - setting to default.`)
   
   
   editor.setTheme("ace/theme/monokai");
@@ -223,7 +223,7 @@ if(modelist.modesByName[language] != undefined) {
      editor.getSession().setMode(`ace/mode/${language}`)
 } else{
   // language was not found
-  console.log(`Ace Editor WC WC Error: Ace Editor Language Mode Could Not Be Found For ${language.charAt(0).toUpperCase() + language.slice(1)}`)
+  console.log(`Ace Editor WC Error: Ace Editor Language Mode Could Not Be Found For ${language.charAt(0).toUpperCase() + language.slice(1)}`)
 }////
   }
 editor.setShowPrintMargin(false);
