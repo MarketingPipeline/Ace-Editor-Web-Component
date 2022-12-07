@@ -11,6 +11,7 @@ This version has some major improvements to the Ace Editor web component - (incl
 
 - Fixed mis-spelled variable. (```AceEditor_WC_Ace_Editor_Path``` was not spelled correctly & would not work for installing Ace Editor / using locally)
 - Fixed / improved typo's in error messages
+- Fixed copy button value
 - Improved the Ace Editor loader
 
 ### Removed
