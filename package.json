@@ -1,6 +1,6 @@
 {
   "name": "@MarketingPipeline/Ace-Editor-Web-Component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A web component to add a Ace Editor / Editor(s) to your HTML document with ease!",
   "license": "MIT",
   "main": "./dist/ace-editor-wc.min.js",
