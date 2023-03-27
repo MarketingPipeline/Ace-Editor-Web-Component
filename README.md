@@ -42,7 +42,7 @@ Set a <code>language</code> attribute to a [supported programming language](#sup
    include this [script](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.js) in your HTML document.
          
   ```html
-    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.1/dist/ace-editor-wc.min.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@1.0.2/dist/ace-editor-wc.min.js" defer></script> 
    ```
     
     
@@ -50,7 +50,7 @@ Set a <code>language</code> attribute to a [supported programming language](#sup
 and include this [CSS](https://github.com/MarketingPipeline/Ace-Editor-Web-Component/blob/main/dist/ace-editor-wc.min.css) file in your HTML document.
 
 ```html
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.1/dist/ace-editor-wc.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarketingPipeline/Ace-Editor-Web-Component@v1.0.2/dist/ace-editor-wc.min.css">
 ```
 
 <b>Note</b>: you can easily customize the look of this web component by hosting your own customized CSS file.
@@ -245,6 +245,14 @@ You can pre-define a code example inside the editor, simply by inserting the cod
 
 <b>Note</b>: the web component will still work with an un-supported language mode for the Ace Editor - tho syntax highlighting, auto-indentation features & etc.. will not work. 
 
+## Loading extensions
+
+To load & use extensions / plugins for Ace Editor. You will need to define a variable / list called ```AceEditor_WC_Ace_Editor_EXTS```. Each URL / file path in this list will be loaded to the page. Example below -
+
+```js
+let AceEditor_WC_Ace_Editor_EXTS = ['https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ext-language_tools.js']
+```
+
 ## Install locally
 
 The web component loads all resources for Ace Editor via CDN. You can change this to load all the resource / file paths from a local path. To set files to be loaded from your local path define a variable ```AceEditor_WC_Ace_Editor_Path``` with the path to load the files from. Example below -
@@ -253,7 +261,7 @@ The web component loads all resources for Ace Editor via CDN. You can change thi
 let AceEditor_WC_Ace_Editor_Path = "path/to/files/"
 ```
 
-You can download / find the version of Ace Editor used in the web-component [here](https://cdn.jsdelivr.net/npm/ace-min-noconflict@1.1.9/)
+You can download / find the version of Ace Editor used in the web-component [here](https://cdnjs.com/libraries/ace)
 
 ## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/Ace-Editor-Web-Component)
 
